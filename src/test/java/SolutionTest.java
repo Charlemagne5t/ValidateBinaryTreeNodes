@@ -25,9 +25,27 @@ public class SolutionTest {
 
     @Test
     public void validateBinaryTreeNodesTest3(){
-        int n = 4;
+        int n = 2;
         int[] leftChild = {1,0};
         int[] rightChild = {-1,-1};
+        boolean actual = new Solution().validateBinaryTreeNodes(n, leftChild, rightChild);
+
+        Assert.assertFalse(actual);
+    }
+    @Test
+    public void validateBinaryTreeNodesTest4(){
+        int n = 4;
+        int[] leftChild = {1,0,3,-1};
+        int[] rightChild = {-1,-1,-1,-1};
+        boolean actual = new Solution().validateBinaryTreeNodes(n, leftChild, rightChild);
+
+        Assert.assertFalse(actual);
+    }
+    @Test
+    public void validateBinaryTreeNodesTest5(){
+        int n = 4;
+        int[] leftChild = {1,0,3,-1};
+        int[] rightChild = {-1,-1,-1,-1};
         boolean actual = new Solution().validateBinaryTreeNodes(n, leftChild, rightChild);
 
         Assert.assertFalse(actual);
